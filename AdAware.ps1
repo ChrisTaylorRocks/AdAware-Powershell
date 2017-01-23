@@ -117,7 +117,8 @@ function Scan-AdAware {
         Write-Verbose "Starting scan"
         $cmd = "$InstallPath\AdAwareCommandLineScanner.exe"
         Write-Verbose $Arg
-        $Output = Start-Process -FilePath $cmd -ArgumentList $Arg -NoNewWindow -PassThru -Wait:$Wait        Write-Verbose "Scan complete. Wait: $Wait"
+        $Output = Start-Process -FilePath $cmd -ArgumentList $Arg -NoNewWindow -PassThru -Wait:$Wait        
+        Write-Verbose "Scan complete. Wait: $Wait"
     }
     else {
         Write-Output "Unable to find AdAware."
